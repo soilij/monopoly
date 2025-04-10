@@ -1,0 +1,205 @@
+/* modern-styles.css */
+
+/* Tổng thể */
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    min-width: 1075px;
+}
+
+/* Cải thiện bảng trò chơi */
+#board {
+    border: 3px solid #2c3e50;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin: 30px auto;
+    background: #ecf0f1;
+    float: none;
+    display: flex;
+    justify-content: center;
+}
+
+/* Tinh chỉnh các ô trên bảng */
+.cell {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cell:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.board-corner {
+    background: #34495e;
+    color: white;
+    border-radius: 8px;
+}
+
+.board-top, .board-bottom, .board-left, .board-right {
+    background: #ffffff;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+}
+
+/* Cải thiện khu vực điều khiển */
+#control {
+    background: #ffffff;
+    border: 3px solid #3498db;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    top: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#quickstats {
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    width: 100px;
+    text-align: center;
+}
+
+/* Cải thiện menu */
+#menutable {
+    background: linear-gradient(90deg, #3498db, #2980b9);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item {
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.menu-item:hover {
+    background: #2980b9;
+}
+
+/* Cải thiện khu vực giao dịch */
+#trade {
+    background: #ffffff;
+    border: 3px solid #e74c3c;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 650px;
+    padding: 10px;
+}
+
+.trade-cell {
+    background: #f9f9f9;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* Cải thiện khu vực tiền */
+#moneybar {
+    background: #2ecc71;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 10px;
+}
+
+.moneybarcell {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* Cải thiện popup */
+#popup {
+    background: #ffffff;
+    border: 3px solid #f1c40f;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+}
+
+/* Cải thiện deed (thẻ tài sản) */
+#deed {
+    background: #ffffff;
+    border: 3px solid #9b59b6;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#deed-header {
+    background: #9b59b6;
+    color: white;
+    border: none;
+    border-radius: 8px 8px 0 0;
+    padding: 10px;
+}
+
+/* Cải thiện nút */
+input[type="button"] {
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+input[type="button"]:hover {
+    background: #2980b9;
+}
+
+/* Cải thiện xúc xắc */
+.die {
+    background: #e74c3c;
+    color: white;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-weight: bold;
+}
+
+/* Cải thiện khu vực setup */
+#setup {
+    background: #ffffff;
+    border: 3px solid #f1c40f;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 30px auto;
+    width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#setup h2 {
+    color: #2c3e50;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+#setup h3 {
+    color: #7f8c8d;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.player-input {
+    margin: 10px 0;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+/* Cải thiện typography */
+td, #popup, #stats {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+/* Cải thiện hiệu ứng hover cho các ô tài sản */
+.propertycellname:hover {
+    background: #ecf0f1;
+    border-radius: 5px;
+}

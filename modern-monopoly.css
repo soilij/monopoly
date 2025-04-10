@@ -1,0 +1,528 @@
+/* Modern Monopoly CSS - Apply this by linking this stylesheet after the original */
+
+:root {
+    --primary-color: #305BC9;
+    --primary-dark: #213EB2;
+    --accent-color: #4CAF50;
+    --light-bg: #f8f9fa;
+    --dark-text: #333;
+    --light-text: #fff;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    line-height: 1.6;
+    min-width: 1075px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Board Styling */
+  #board {
+    border: 3px solid #333;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    margin: 25px auto;
+    float: none;
+    display: block;
+    background: linear-gradient(135deg, #e6f7ff, #ffffff);
+  }
+  
+  .cell {
+    transition: var(--transition);
+    overflow: hidden;
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .board-corner {
+    background-color: #f5f5f5;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cell:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 5;
+  }
+  
+  .cell-name {
+    font-weight: bold;
+    font-size: 8px;
+    padding: 2px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 2px;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
+  }
+  
+  /* Money Bar Styling */
+  #moneybar {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 15px;
+    margin: 15px;
+    transition: var(--transition);
+    border: 1px solid #ddd;
+  }
+  
+  .moneybarcell {
+    background: linear-gradient(to bottom, #ffffff, #f5f5f5);
+    border-radius: var(--border-radius);
+    padding: 8px 12px;
+    transition: var(--transition);
+    border: 1px solid #e0e0e0;
+  }
+  
+  .moneybarcell:hover {
+    background: linear-gradient(to bottom, #f5f5f5, #e9e9e9);
+  }
+  
+  .money-bar-arrow {
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2));
+    opacity: 0.8;
+    transition: var(--transition);
+  }
+  
+  .money-bar-arrow:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  
+  /* Control Panel Styling */
+  #control {
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    background-color: white;
+    padding: 15px;
+    z-index: 9;
+    transition: var(--transition);
+    border: 1px solid #ddd;
+  }
+  
+  #quickstats {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: var(--border-radius);
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    text-align: center;
+    border: none;
+  }
+  
+  /* Menu Styling */
+  #menu {
+    width: 100%;
+    margin: 0 0 15px 0;
+  }
+  
+  #menutable {
+    background: var(--primary-color);
+    background-image: linear-gradient(to bottom, var(--primary-color), var(--primary-dark));
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    border: none;
+    overflow: hidden;
+  }
+  
+  .menu-item {
+    transition: var(--transition);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0;
+  }
+  
+  .menu-item:hover {
+    background-image: linear-gradient(to bottom, #4068e0, var(--primary-color));
+  }
+  
+  .menu-item a {
+    padding: 10px 15px;
+    font-weight: 600;
+  }
+  
+  /* Alert and Information Panels */
+  #alert {
+    border-radius: var(--border-radius);
+    border: 1px solid #ddd;
+    background-color: white;
+    padding: 10px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    height: 100px;
+    margin-bottom: 15px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+  }
+  
+  #alert div {
+    padding: 5px 0;
+    border-bottom: 1px dotted #eee;
+  }
+  
+  #landed {
+    border-radius: var(--border-radius);
+    background-color: #f8f9fa;
+    padding: 15px;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Button Styling */
+  input[type="button"] {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+    margin: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  input[type="button"]:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  #nextbutton {
+    background-color: var(--accent-color);
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+  
+  #nextbutton:hover {
+    background-color: #388E3C;
+  }
+  
+  #resignbutton {
+    background-color: #F44336;
+  }
+  
+  #resignbutton:hover {
+    background-color: #D32F2F;
+  }
+  
+  /* Property Management */
+  #manage {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    margin-top: 15px;
+  }
+  
+  #option {
+    background-color: #f8f9fa;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .property-cell-row {
+    transition: var(--transition);
+    cursor: pointer;
+  }
+  
+  .property-cell-row:hover {
+    background-color: #f0f4f8;
+  }
+  
+  .propertycellcheckbox input {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+  }
+  
+  .propertycellname {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+  
+  /* Dice Styling */
+  .die {
+    margin: 8px;
+    transition: transform 0.5s ease;
+  }
+  
+  .die img {
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .die-no-img {
+    background-color: white;
+    color: #333;
+    font-size: 18px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    padding: 10px 15px;
+  }
+  
+  /* Popup and Dialog Styling */
+  #popup, #stats {
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    background-color: white;
+    border: none;
+    max-width: 90%;
+  }
+  
+  #popupbackground, #statsbackground {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  #popupclose input, #statsclose {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #e74c3c;
+    color: white;
+    border: 2px solid white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  #popupclose input:hover, #statsclose:hover {
+    background-color: #c0392b;
+    transform: scale(1.1);
+  }
+  
+  /* Deed Display */
+  #deed {
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    border: none;
+  }
+  
+  #deed-header {
+    border-bottom: 1px solid #ddd;
+    font-family: 'Georgia', serif;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  #deed-name {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 5px;
+  }
+  
+  #deed-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+  }
+  
+  #deed-table td {
+    padding: 5px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  
+  /* Setup Screen */
+  #setup {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+  }
+  
+  #setup h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+  }
+  
+  .player-input {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+  }
+  
+  .player-input:hover {
+    background-color: #eef2f7;
+  }
+  
+  #setup select, #setup input[type="text"] {
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+    transition: var(--transition);
+  }
+  
+  #setup select:focus, #setup input[type="text"]:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(48, 91, 201, 0.1);
+  }
+  
+  /* Trade Panel */
+  #trade {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+  }
+  
+  .trade-cell {
+    background-color: #f8f9fa;
+    padding: 12px;
+    border-radius: 4px;
+    margin: 5px 0;
+  }
+  
+  #trade input[type="text"] {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+    width: calc(100% - 25px);
+    transition: var(--transition);
+  }
+  
+  #trade input[type="text"]:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(48, 91, 201, 0.1);
+  }
+  
+  /* Game Pieces */
+  .house {
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+    transition: var(--transition);
+  }
+  
+  .hotel {
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+    transition: var(--transition);
+  }
+  
+  .house:hover, .hotel:hover {
+    transform: scale(1.2);
+  }
+  
+  .cell-position {
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: var(--transition);
+  }
+  
+  .cell-position:hover {
+    transform: scale(1.2);
+    z-index: 10;
+  }
+  
+  /* Responsive Adjustments */
+  @media screen and (max-width: 1200px) {
+    #board {
+      float: none;
+      margin: 25px auto;
+    }
+    
+    #control {
+      position: relative;
+      margin: 20px auto;
+      top: auto;
+      left: auto;
+      max-width: 600px;
+    }
+    
+    #moneybar {
+      float: none;
+      margin: 15px auto;
+      max-width: 600px;
+    }
+  }
+  
+  /* Animations */
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  /* Apply animations */
+  #popupwrap, #statswrap {
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  #popup, #stats {
+    animation: slideIn 0.3s ease-out;
+  }
+  
+  #nextbutton:focus {
+    animation: pulse 1s infinite;
+  }
+  
+  #alert div {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  /* Improved jail styling */
+  #jail {
+    background: repeating-linear-gradient(
+      45deg,
+      #BBB,
+      #BBB 10px,
+      #999 10px,
+      #999 20px
+    );
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #jail span {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  
+  /* Owner indicators */
+  .cell-owner {
+    transition: var(--transition);
+    opacity: 0.85;
+  }
+  
+  .cell-owner:hover {
+    opacity: 1;
+  }
